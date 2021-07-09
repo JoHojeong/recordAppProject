@@ -1,52 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
     tools:context=".LoginActivity">
 
-
-    <EditText
-        android:id="@+id/et_id"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/Tittle_Login"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="아이디"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="285dp" />
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/et_pass"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/et_id"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/et_id"
-        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+        android:layout_weight="7"
+        android:gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="207dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:text="가입"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            android:textColor="@color/black" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="207dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="76dp"
-        android:text="로그인"
-        app:layout_constraintEnd_toEndOf="@+id/et_pass"
-        app:layout_constraintStart_toStartOf="@+id/et_pass"
-        app:layout_constraintTop_toBottomOf="@+id/et_pass" />
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/id"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edge" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_id"
+            android:text="@string/pass"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/pass"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/edge"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/eye"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignRight="@+id/et_pass"
+            android:layout_alignBottom="@+id/et_pass"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:button="@null"
+            android:background="@drawable/checkbox" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/basic_btn"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/basic_btn"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
