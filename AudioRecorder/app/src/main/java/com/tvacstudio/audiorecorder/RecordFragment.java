@@ -71,10 +71,10 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
         //Intitialize Variables
         navController = Navigation.findNavController(view);
-        listBtn = view.findViewById(R.id.record_list_btn);
+        // listBtn = view.findViewById(R.id.record_list_btn);
         recordBtn = view.findViewById(R.id.record_btn);
         timer = view.findViewById(R.id.record_timer);
-        filenameText = view.findViewById(R.id.record_filename);
+        // filenameText = view.findViewById(R.id.record_filename);
 
         /* Setting up on click listener
            - Class must implement 'View.OnClickListener' and override 'onClick' method
@@ -90,11 +90,13 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
         /*  Check, which button is pressed and do the task accordingly
         */
         switch (v.getId()) {
+
+            /*
             case R.id.record_list_btn:
-                /*
+                *//*
                 Navigation Controller
                 Part of Android Jetpack, used for navigation between both fragments
-                 */
+                 *//*
                 if(isRecording){
                     AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
                     alertDialog.setPositiveButton("OKAY", new DialogInterface.OnClickListener() {
@@ -112,6 +114,8 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
                     navController.navigate(R.id.action_recordFragment_to_audioListFragment);
                 }
                 break;
+                */
+
 
             case R.id.record_btn:
                 if(isRecording) {
