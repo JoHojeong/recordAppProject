@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,104 +8,140 @@
     tools:context=".RecordFragment"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Tittle_main"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:background="@color/white"
-        android:elevation="5dp"
-        android:text=" "
-        android:textStyle="bold"
-        android:textSize="20dp"
-        />
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_weight="1">
+        android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/record_btn"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:src="@drawable/main_record" />
+            android:background="@color/white"
+            android:elevation="5dp">
 
-        <Chronometer
-            android:id="@+id/record_timer"
+            <TextView
+                android:id="@+id/Tittle_main"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text=" "
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/my_page"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:src="@drawable/recorder_list_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="20dp"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/record_btn"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/open_sans_light"
-            android:textColor="@color/black"
-            android:textSize="64sp" />
+            android:layout_marginTop="30dp"
+            android:layout_weight="1">
 
-    </RelativeLayout>
+            <ImageButton
+                android:id="@+id/record_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:src="@drawable/main_record" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="1">
+            <Chronometer
+                android:id="@+id/record_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/record_btn"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:textColor="@color/black"
+                android:textSize="64sp" />
 
-        <TextView
-            android:id="@+id/send_people"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="보내는 사람"
-            android:textColor="@color/black" />
+        </RelativeLayout>
 
-        <EditText
-            android:id="@+id/edit_send_people"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/send_people" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/send_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_send_people"
-            android:text="전송 일자"
-            android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/send_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보내는 사람"
+                android:textColor="@color/black" />
 
-        <EditText
-            android:id="@+id/edit_send_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/send_date" />
+            <EditText
+                android:id="@+id/edit_send_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/send_people"
+                android:hint="텍스트를 입력하시오."
+                android:textSize="15dp"/>
 
-        <TextView
-            android:id="@+id/send_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/edit_send_date"
-            android:text="전송 시간"
-            android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/send_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_send_people"
+                android:text="전송 일자"
+                android:textColor="@color/black" />
 
-        <EditText
-            android:id="@+id/edit_send_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/send_time"/>
+            <EditText
+                android:id="@+id/edit_send_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/send_date"
+                android:hint="날짜를 선택하시오."
+                android:textSize="15dp"/>
 
-        <Button
-            android:id="@+id/done"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/edit_send_time"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/basic_btn"
-            android:text="완료"
-            android:textColor="@color/white"
-            android:textSize="15dp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/send_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_send_date"
+                android:text="전송 시간"
+                android:textColor="@color/black" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/edit_send_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/send_time"
+                android:hint="시간을 선택하시오."
+                android:textSize="15dp"/>
+
+            <Button
+                android:id="@+id/done"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/edit_send_time"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/basic_btn"
+                android:text="완료"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menu_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/mypage_navheader"
+        app:menu="@menu/mypage_navigation" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
