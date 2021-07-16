@@ -26,7 +26,7 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
     @NonNull
     @Override
     public AudioViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_list_get_item, parent, false);
         timeAgo = new TimeAgo();
         return new AudioViewHolder(view);
     }
@@ -52,8 +52,8 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
             super(itemView);
 
             list_image = itemView.findViewById(R.id.list_image_view);
-            list_title = itemView.findViewById(R.id.list_title);
-            list_date = itemView.findViewById(R.id.list_date);
+            // list_title = itemView.findViewById(R.id.list_title);
+            // list_date = itemView.findViewById(R.id.list_date);
 
             itemView.setOnClickListener(this);
 

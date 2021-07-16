@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/list_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/ic_play" />
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_image_view"
+            android:layout_marginStart="16dp" />
+
+        <LinearLayout
+            android:id="@+id/group1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@+id/list_image_view"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/send_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/list_image_view"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="보낸 사람"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/edit_send_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/list_image_view"
+                android:text="신동주"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@+id/list_image_view"
+            android:layout_below="@id/group1"
+            android:layout_marginLeft="30dp">
+
+            <TextView
+                android:id="@+id/send_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/list_image_view"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="전송 일자"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/edit_send_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/list_image_view"
+                android:text="2021.07.02 AM 10:30"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group2"
+            android:layout_toEndOf="@id/list_image_view"/>
+    </RelativeLayout>
+
+</LinearLayout>

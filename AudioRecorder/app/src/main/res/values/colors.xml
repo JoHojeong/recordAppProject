@@ -7,9 +7,9 @@
     <color name="dark_puple">#68499F</color>
 
 
-    <color name="colorPrimary">#6177FC</color>
-    <color name="colorPrimaryDark">#576EF7</color>
-    <color name="colorAccent">#FF6584</color>
+    <color name="colorPrimary">#BD9BF8</color>
+    <color name="colorPrimaryDark">#A479F1</color>
+    <color name="colorAccent">#68499F</color>
 
     <color name="colorDarkBlue">#3D4054</color>
 </resources>

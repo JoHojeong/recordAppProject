@@ -23,5 +23,5 @@
         android:id="@+id/audioListFragment"
         android:name="com.tvacstudio.audiorecorder.AudioListFragment"
         android:label="fragment_audio_list"
-        tools:layout="@layout/fragment_audio_list" />
+        tools:layout="@layout/fragment_get_audio_list" />
 </navigation>
