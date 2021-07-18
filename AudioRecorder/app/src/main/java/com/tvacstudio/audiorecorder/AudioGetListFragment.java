@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AudioListFragment extends Fragment implements AudioListAdapter.onItemListClick {
+public class AudioGetListFragment extends Fragment implements AudioListAdapter.onItemListClick {
 
     private ConstraintLayout playerSheet;
     private BottomSheetBehavior bottomSheetBehavior;
@@ -52,7 +52,7 @@ public class AudioListFragment extends Fragment implements AudioListAdapter.onIt
     private Handler seekbarHandler;
     private Runnable updateSeekbar;
 
-    public AudioListFragment() {
+    public AudioGetListFragment() {
         // Required empty public constructor
     }
 
