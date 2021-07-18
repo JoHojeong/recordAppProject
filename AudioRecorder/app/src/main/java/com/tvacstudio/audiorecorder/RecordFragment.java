@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.os.Environment;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -170,12 +172,16 @@ public class RecordFragment extends Fragment implements View.OnClickListener {
 
         filenameText.setText("Recording, File Name : " + recordFile);
 
+        File sdcard = Environment.getExternalStorageDirectory();
+
         //Setup Media Recorder for recording
         mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setOutputFile(recordPath + "/" + recordFile);
+        mediaRecorder.setOutputFile(sdcard + "/" + recordFile);
         mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+
 
         try {
             mediaRecorder.prepare();
