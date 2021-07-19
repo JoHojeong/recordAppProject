@@ -56,11 +56,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (i == true){
-                    record.setImageResource(R.drawable.main_record);
                     Chrono.start();
                     i = false;
                 }else {
-                    record.setImageResource(R.drawable.main_recording);
                     i = true;
                     Chrono.stop();
                 }
@@ -104,6 +102,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 네비게이션 툴바 선택 코드
-        
+
     }
 }
